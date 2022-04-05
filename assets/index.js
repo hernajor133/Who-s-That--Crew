@@ -4,28 +4,29 @@ const Manager = require('../employees/Manager');
 const Intern = require('../employees/Intern');
 const Engineer = require('../employees/Engineer');
 
+
 const employeeArray = [];
 
+ 
 const addTeamMembers = [
     {
         type: 'list',
-        message: "Do you want to add a member to the team?",
-        choices: ['YES', 'NO'],
+        message: "Do you want to add a crew member to the crew?",
+        choices: ['Yes', 'No'],
         name: 'answer',
         validate: function (answer) {
             if (answer.length < 1) {
-                return console.log("Please choose to add member or not.");
+                return console.log("Please choose to add a crew member or not.");
             }
             return true;
-            
-        } 
-    } 
+        }
+    }
 ];
 
 const roleQuestion = [
     {
         type: 'list',
-        message: "What is the role of the team member?",
+        message: "What is the role of the crew member?",
         choices: ['Engineer', 'Intern'],
         name: 'role',
         validate: function (answer) {
@@ -42,7 +43,7 @@ const engineerQuestions = [
         type: 'input',
         message: "Enter Name.",
         name: 'name',
-        default: 'Juan',
+        default: 'Jordi',
         validate: function (answer) {
             if (answer.length < 1) {
                 return console.log("Required!");
@@ -53,8 +54,8 @@ const engineerQuestions = [
     {
         type: 'input',
         message: "Enter ID number.",
-        name: 'ID',
-        default: '2',
+        name: 'id',
+        default: '13',
         validate: function (answer) {
             if (answer.length < 1) {
                 return console.log("Required!");
@@ -66,7 +67,7 @@ const engineerQuestions = [
         type: 'input',
         message: "Enter email.",
         name: 'email',
-        default: 'Juan@email.com',
+        default: 'jordihernandez133@gmail.com',
         validate: function (answer) {
             if (answer.length < 1) {
                 return console.log("Required!");
@@ -78,7 +79,7 @@ const engineerQuestions = [
         type: 'input',
         message: "Enter GitHub username.",
         name: 'github',
-        default: 'example',
+        default: 'hernajor133',
         validate: function (answer) {
             if (answer.length < 1) {
                 return console.log("Required!");
@@ -86,6 +87,7 @@ const engineerQuestions = [
             return true;
         }
     },
+
 ];
 
 const internQuestions = [
@@ -93,7 +95,7 @@ const internQuestions = [
         type: 'input',
         message: "Enter Name.",
         name: 'name',
-        default: 'Juan',
+        default: 'Jordi',
         validate: function (answer) {
             if (answer.length < 1) {
                 return console.log("Required!");
@@ -104,8 +106,8 @@ const internQuestions = [
     {
         type: 'input',
         message: "Enter ID number.",
-        name: 'ID',
-        default: '2',
+        name: 'id',
+        default: '13',
         validate: function (answer) {
             if (answer.length < 1) {
                 return console.log("Required!");
@@ -117,7 +119,7 @@ const internQuestions = [
         type: 'input',
         message: "Enter email.",
         name: 'email',
-        default: 'Juan@email.com',
+        default: 'jordihernandez133@gmail.com',
         validate: function (answer) {
             if (answer.length < 1) {
                 return console.log("Required!");
@@ -129,7 +131,7 @@ const internQuestions = [
         type: 'input',
         message: "Enter School Name.",
         name: 'school',
-        default: 'University of Washington',
+        default: 'Unversity of Washington',
         validate: function (answer) {
             if (answer.length < 1) {
                 return console.log("Required!");
@@ -137,6 +139,7 @@ const internQuestions = [
             return true;
         }
     },
+
 ];
 
 const managerQuestions = [
@@ -144,7 +147,7 @@ const managerQuestions = [
         type: 'input',
         message: "Enter Name.",
         name: 'name',
-        default: 'Juan',
+        default: 'Jordi',
         validate: function (answer) {
             if (answer.length < 1) {
                 return console.log("Required!");
@@ -155,8 +158,8 @@ const managerQuestions = [
     {
         type: 'input',
         message: "Enter ID number.",
-        name: 'ID',
-        default: '2',
+        name: 'id',
+        default: '13',
         validate: function (answer) {
             if (answer.length < 1) {
                 return console.log("Required!");
@@ -168,7 +171,7 @@ const managerQuestions = [
         type: 'input',
         message: "Enter office number.",
         name: 'office',
-        default: '3',
+        default: '13',
         validate: function (answer) {
             if (answer.length < 1) {
                 return console.log("Required!");
@@ -180,14 +183,14 @@ const managerQuestions = [
         type: 'input',
         message: "Enter email.",
         name: 'email',
-        default: 'Juan@email.com',
+        default: 'jordihernandez133@gmail.com',
         validate: function (answer) {
             if (answer.length < 1) {
                 return console.log("Required!");
             }
             return true;
         }
-    },
+    }
 ];
 
 function askManager() {
@@ -197,7 +200,6 @@ function askManager() {
             console.log(response);
             const manager = new Manager(response.id, response.name, response.email, response.office);
             employeeArray.push(manager);
-            
         })
         .then(askToAddTeamMembers)
 };
@@ -224,20 +226,22 @@ function askIntern() {
         .then(askToAddTeamMembers)
 };
 
+
 function askToAddTeamMembers() {
     inquirer
     .prompt(addTeamMembers)
     .then((input) => {
         if(input.answer == 'No') {
-            console.log('Your Crew is built!');
-            fs.writeFile('index.html', `<!DOCTYPE html>
+            console.log('Your crew is built!');
+            fs.writeFile(
+            'index.html', `<!DOCTYPE html>
             <html lang="en">
             <head>
                 <meta charset="UTF-8">
                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-                <link rel="stylesheet" href="./assets/style.css">
+                <link rel="stylesheet" href="./style.css">
                 <title>Profile Generator</title>
             </head>
             <body>
@@ -245,23 +249,21 @@ function askToAddTeamMembers() {
                     <h1 class="display-4">My Team</h1>
                     <p class="lead">View teammate information cards below.</p>
                     <hr class="my-4">
-                </div>
-                <div id="card-container" class="container">
-                ${generateCards()}
-                </div>
+                  </div>
+                  <div id="card-container" class="container">
+                  ${generateCards()}
+                  </div>
                 </div>
             </body>
             <script src="assets/index.js"></script>
             </html>`, function(err) {
                 if (err) throw err;
-                console.log('We made it!');
+                console.log('Congradulations!');
             }
             )} else if (input.answer == 'Yes') {
             askRole();
-        
-    
-    
 }
+
 
 function generateCards() {
     return employeeArray.map((employee) => {
@@ -269,17 +271,17 @@ function generateCards() {
     }).join("");
 };
 
-function generateCard(employee){
+function generateCard(employee) {
     let characteristic = "";
     let cardTitle = "";
     let employeeIcon = "";
 
     if (employee instanceof Manager) {
-        characteristic = `office: ${employee.getoffice()}`;
+        characteristic = `Office: ${employee.getOffice()}`;
         cardTitle = "Manager";
         employeeIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cup" viewBox="0 0 16 16">
         <path d="M1 2a1 1 0 0 1 1-1h11a1 1 0 0 1 1 1v1h.5A1.5 1.5 0 0 1 16 4.5v7a1.5 1.5 0 0 1-1.5 1.5h-.55a2.5 2.5 0 0 1-2.45 2h-8A2.5 2.5 0 0 1 1 12.5V2zm13 10h.5a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.5-.5H14v8zM13 2H2v10.5A1.5 1.5 0 0 0 3.5 14h8a1.5 1.5 0 0 0 1.5-1.5V2z"></path>
-        </svg>`;
+      </svg>`;
     } else if (employee instanceof Engineer) {
         characteristic = `GitHub: <a target="_blank" href="https://www.github.com/${employee.getGithub()}" class="card-link"> ${employee.getGithub()}</a>`;
         cardTitle = "Engineer";
@@ -297,22 +299,23 @@ function generateCard(employee){
 
     return `<div class="card" style="width: 18rem;">
     <div class="card-body">
-        <h5 class="card-title">${cardTitle}</h5>
-        ${employeeIcon}
-        <p class="card-text">Name: ${employee.getName()}</p>
+      <h5 class="card-title">${cardTitle}</h5>
+      ${employeeIcon}
+      <p class="card-text">Name: ${employee.getName()}</p>
     </div>
     <ul class="list-group list-group-flush">
-        <li class="list-group-item">ID: ${employee.getId()}</li>
-        <li class="list-group-item"> Email: <a href="mailto:${employee.getEmail()}" class="card-link"> ${employee.getEmail()}</a></li>
-        <li class="list-group-item">${characteristic}</li>
+      <li class="list-group-item">ID: ${employee.getId()}</li>
+      <li class="list-group-item"> Email: <a href="mailto:${employee.getEmail()}" class="card-link"> ${employee.getEmail()}</a></li>
+      <li class="list-group-item">${characteristic}</li>
     </ul>
     <div class="card-body">
     </div>
-    </div>`;
+  </div>`;
 }
 
+
 function askRole() {
-    console.log("Create your crew!");
+    console.log("Time to create your crew!");
     inquirer
         .prompt(roleQuestion)
         .then((input) => {
@@ -326,5 +329,6 @@ function askRole() {
     }
     })    
 };
+
 
 askManager();
