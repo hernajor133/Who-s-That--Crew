@@ -1,11 +1,11 @@
 const Employee = require("../../employees/Employee");
 
-const employee = new Employee(8, "Itzel", "itzel@gmail.com", "employee");
+const employee = new Employee(8, "Jordi", "jordihernandez133@gmail.com", "employee");
 
 describe("Employee class", () => {
     describe("getName method", () => {
         it("returns the name of the employee", () => {
-            expect(employee.getName()).toBe("Itzel");
+            expect(employee.getName()).toBe("Jordi");
         });
     });
     describe("getId method", () => {
@@ -15,7 +15,7 @@ describe("Employee class", () => {
     });
     describe("getEmail method", () => {
         it("returns the email of the employee", () => {
-            expect(employee.getEmail()).toBe("itzel@gmail.com");
+            expect(employee.getEmail()).toBe("jordihernandez133@gmail.com");
         });
     });
     describe("getRole method", () => {

@@ -1,11 +1,11 @@
 const Intern = require("../../employees/Intern");
 
-const employee = new Intern(8, "Paco", "paco@gmail.com", "Washington State University");
+const employee = new Intern(9, "Jordi", "jordihernandez133@gmail.com", "Washington State University");
 
 describe("Intern class", () => {
     describe("getName method", () => {
         it("returns the name of the employee", () => {
-            expect(employee.getName()).toBe("Paco");
+            expect(employee.getName()).toBe("Jordi");
         });
     });
     describe("getSchool method", () => {
@@ -20,7 +20,7 @@ describe("Intern class", () => {
     });
     describe("getEmail method", () => {
         it("returns the email of the employee", () => {
-            expect(employee.getEmail()).toBe("paco@gmail.com");
+            expect(employee.getEmail()).toBe("jordihernandez133@gmail.com");
         });
     });
     describe("getRole method", () => {

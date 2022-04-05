@@ -1,12 +1,12 @@
 const Engineer = require("../../employees/Engineer");
 
-const employee = new Engineer(12, "Carlos", "carlos@gmail.com", "gitHubExample");
+const employee = new Engineer(12, "Jordi", "jordihernandez133@gmail.com", "gitHubExample");
 
 describe("Engineer class", () => {
     describe("getGitHub method", () => {
         describe("getName method", () => {
             it("returns the name of the employee", () => {
-                expect(employee.getName()).toBe("Carlos");
+                expect(employee.getName()).toBe("Jordi");
             });
         });
         it("returns the name of the engineer's github", () => {
@@ -20,7 +20,7 @@ describe("Engineer class", () => {
     });
     describe("getEmail method", () => {
         it("returns the email of the employee", () => {
-            expect(employee.getEmail()).toBe("carlos@gmail.com");
+            expect(employee.getEmail()).toBe("jordihernandez133@gmail.com");
         });
     });
     describe("getRole method", () => {
