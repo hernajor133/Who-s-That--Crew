@@ -242,12 +242,12 @@ function askToAddTeamMembers() {
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
                 <link rel="stylesheet" href="./style.css">
-                <title>Profile Generator</title>
+                <title>Who's That Crew!</title>
             </head>
             <body>
                 <div class="jumbotron">
-                    <h1 class="display-4">My Team</h1>
-                    <p class="lead">View teammate information cards below.</p>
+                    <h1 class="display-4">My Crew</h1>
+                    <p class="lead">Checkout the Crews info!</p>
                     <hr class="my-4">
                   </div>
                   <div id="card-container" class="container">

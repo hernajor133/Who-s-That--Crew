@@ -1,15 +1,33 @@
 body {
-    background-color: gray;
+    background-color: rgb(44, 44, 44);
     color: black;
     text-align: center;
 }
 
 .card {
     margin: 30px;
+    background-color: gray;
+    color: white
+    
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.list-group-item {
+    background-color: gray;
 }
 
 #card-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.jumbotron {
+    background-color: black;
+    color: white
 }
