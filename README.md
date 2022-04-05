@@ -9,7 +9,7 @@
 6. [Tests](#tests)
 7. [Screenshots](#screenshots)
 8. [Walkthrough-Video](walkthrough-video)
-9. [GitHub/Deployed-Pages](github/deployed-pages)
+9. [GitHub](github)
 10. [Contributions](#contributions)
 
 ## Description
@@ -52,7 +52,7 @@ Several tests were created to test each referanced javaScript file to it`s respe
 
 ## Walkthrough-Video
 [Video](https://drive.google.com/file/d/1iHhhI2wqllK4bSkUz66ogk3NFWGx_o66/view)
-## GitHub/Deployed-Pages
+## GitHub
 [GitHub](https://github.com/hernajor133/Who-s-That-Crew) 
 
 ## Contributions 
