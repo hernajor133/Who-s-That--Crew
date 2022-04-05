@@ -46,8 +46,12 @@ Any Employee can use this application to generate information of each crew membe
 Several tests were created to test each referanced javaScript file to it`s respective classes. This had to be done in order to ensure that each answered question was being passed down correctly in order to generate an HTML file.
 
 ## Screenshots 
+![tests/node](./img/whos-that-crew-node.png)
+![html](./img/whos-that-crew-html.png)
+![webpage](./img/Whos-That-Crew.png)
 
 ## Walkthrough-Video
+[Video](https://drive.google.com/file/d/1iHhhI2wqllK4bSkUz66ogk3NFWGx_o66/view)
 ## GitHub/Deployed-Pages
 [GitHub](https://github.com/hernajor133/Who-s-That-Crew) 
 
